@@ -11,8 +11,6 @@ def app(environ, start_response):
         ("Content-Length", str(len(data)))
     ])
     qs =  parse_qs(environ['QUERY_STRING'])
-    #for x in qs:
-    #    for y in qs[x]:
-    #        print(x, '=', y, sep='')
+
     return iter([data])
 
